@@ -1,8 +1,6 @@
 Lenguaje egg :egg::snake:
 ===
 
-![GitHub Classroom Workflow](https://github.com/ULL-ESIT-PL-1920/p5-t1-egg-0-miguelbravo7/workflows/GitHub%20Classroom%20Workflow/badge.svg)
-
 Este lenguaje realizado a lo largo de varias prácticas será uno parecido a `((((lisp))))` comprendido en dos fases *parseado* y *evaluación*, distintas funcionalidades se implementarán en base a estos dos procesos [Coverage de los tests](coverage/lcov-report/index.html). 
 
 Antes de ello, en primera instancia vamos a definir la **gramática**:
