@@ -1,0 +1,5 @@
+do {
+    :=(z, require("test/example/module.egg")),
+    print(z.inc(4)),
+    :=(w, require("test/example/module.egg"))
+}

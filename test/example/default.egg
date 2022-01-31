@@ -1,0 +1,21 @@
+do(
+  def(x,1),
+  def(y,2),
+  /* def crea una nueva variable local */
+  def(f, fun{
+    x,
+    y,
+    default(z,5),
+    do{
+      print(x, y, z)
+    }
+  }),
+  def(g,f(y)),
+  f(x, y)
+  ,
+  g(x)
+  ,
+  f(x, y, 7)
+  ,
+  g(x, 9)
+)

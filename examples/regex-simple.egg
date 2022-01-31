@@ -1,0 +1,10 @@
+do {
+:=(r, r/(\w+)
+        \s+
+        (\d+)  # numero 
+        /x),
+:=(s, r["test"]("a 4")),
+:=(m, r["exec"](";;; a 42")),
+print(s),
+print(m),
+}

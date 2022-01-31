@@ -1,0 +1,56 @@
+parallel {
+    do {
+        :=(r, r/(\w+)
+                \s+
+                (\d+)  # numero 
+                /x),
+        :=(s, r["test"]("a 4")),
+        :=(m, r["exec"](";;; a 42")),
+        print(1, s)
+    },
+    do (
+        def(x, object (
+            "c", 0,
+            "gc", ->{element[this, "c"]},
+            "sc", ->{value, =(this, "c", value)},
+            "inc", ->{=(this, "c", +(element[this, "c"],1))}
+        )),
+        print(2, x("gc")())
+    ),
+    do{
+        def(x, object (
+            "c", 0,
+            "gc", ->{element[this, "c"]},
+            "sc", ->{value, =(this, "c", value)},
+            "inc", ->{=(this, "c", +(element[this, "c"],1))}
+        )),
+        define(x, arr[1, arr[3, 4]]),
+        print(3, x["sub"](1, 1))
+    },
+    do {
+        :=(r, r/(\w+)
+                \s+
+                (\d+)  # numero 
+                /x),
+        :=(s, r["test"]("a 4")),
+        :=(m, r["exec"](";;; a 42")),
+        print(4, s)
+    },
+    do (
+        def(x, object (
+            "c", 0,
+            "gc", ->{element[this, "c"]},
+            "sc", ->{value, =(this, "c", value)},
+            "inc", ->{=(this, "c", +(element[this, "c"],1))}
+        )),
+        print(5, x("gc")())
+    ),
+    do{
+        define(x, arr[1, arr[3, 4]]),
+        print(6, x["sub"](1, 1))
+    },
+    do{
+        define(x, arr[1, arr[3, 4]]),
+        print(7, x["sub"](1, 1))
+    }
+}

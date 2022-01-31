@@ -1,0 +1,6 @@
+do(
+  def(x, array[1]),
+  print(x),                     # [1]
+  ...(x, array[2,3]),
+  print(x),                     # [1, 2, 3]
+ )

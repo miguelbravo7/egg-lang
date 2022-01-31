@@ -1,0 +1,18 @@
+do (
+    use("@miguelbravo7/egg-web-utilities"),
+    def(x, object (
+        "headless", false
+    )),
+    browser(x,
+        incognito(
+            on("https://joel.tools/merch/", 
+                #currentPage.waitForSelector("body"),
+                print(storeCssCount(".price")),
+                print(storeText(".price")),
+                print(storeAllText(".price")),
+                print(storeElement(".price")),
+                print(storeAllElement(".price")),
+            )
+        )
+    )
+)

@@ -1,0 +1,5 @@
+do(
+  def(w, array[]),
+  w["="](-5, 0),
+  print(w)
+)

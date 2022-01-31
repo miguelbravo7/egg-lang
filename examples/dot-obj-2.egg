@@ -1,0 +1,14 @@
+do (
+  def(x, object (
+    c:   3,
+    gc:  ->{this.c},
+    sc:  ->{value, =(this, "c", value)},
+    inc: ->{=(this, "c", +(this.c, 1))}
+  )),
+
+  print(x["c"]), # 3
+  print(x.c),    # 3
+  print(x.gc()), # 3
+  print(x.sc(5)),# 5
+  print(x.gc())  # 5
+)
